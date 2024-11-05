@@ -1,0 +1,65 @@
+{
+  "evalConfig": {
+    "modelSpecs": [
+      {
+        "labelKey": "stress_rate_xf"
+      }
+    ],
+    "slicingSpecs": [
+      {},
+      {
+        "featureKeys": [
+          "stress_rate_xf"
+        ]
+      }
+    ],
+    "metricsSpecs": [
+      {
+        "modelNames": [
+          ""
+        ],
+        "perSliceThresholds": {
+          "accuracy": {
+            "thresholds": [
+              {
+                "slicingSpecs": [
+                  {}
+                ],
+                "threshold": {
+                  "valueThreshold": {
+                    "lowerBound": 0.6
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "metrics": [
+          {
+            "className": "AUC"
+          },
+          {
+            "className": "Precision"
+          },
+          {
+            "className": "Recall"
+          },
+          {
+            "className": "ExampleCount"
+          }
+        ],
+        "modelNames": [
+          ""
+        ]
+      }
+    ]
+  },
+  "version": "0.46.0",
+  "dataLocation": "<user provided PCollection>",
+  "fileFormat": "<unknown>",
+  "modelLocations": {
+    "": "pipelines/sleep-stress-pipeline/Trainer/model/8/Format-Serving"
+  }
+}
